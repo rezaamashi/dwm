@@ -149,6 +149,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_c,      quit,           {0} },
 	{ MODKEY|ControlMask|ShiftMask, XK_r,      quit,           {1} },
+	{ MODKEY,                       XK_minus, scratchpad_show, {0} },
+	{ MODKEY|ShiftMask,             XK_minus, scratchpad_hide, {0} },
+	{ MODKEY,                       XK_equal,scratchpad_remove,{0} },
 };
 
 /* button definitions */
