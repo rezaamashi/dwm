@@ -88,55 +88,55 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 *  WM_WINDOW_ROLE(STRING) = role
 	 */
-	/* class                role  instance    title       tags mask  isterminal  noswallow          isfloating   monitor */
+	/* class                role  instance    title       tags mask     isterminal  noswallow    isfloating   monitor float x,y,w,h  floatborderpx */
         /* 1 - Terminals */
-        { "Alacritty",          NULL, NULL,       NULL,       1,         1,          0,                  0,           -1 },
-	{ "kitty",              NULL, NULL,       NULL,       1,         1,          0,                  0,           -1 },
-	{ "URxvt",              NULL, NULL,       NULL,       1,         1,          0,                  0,           -1 },
+        { "Alacritty",          NULL, NULL,       NULL,       1,            1,            1,             0,           -1, 50,500,500,500,   5 },
+	{ "kitty",              NULL, NULL,       NULL,       1,            1,            1,             0,           -1, 50,500,500,500,   5 },
+	{ "URxvt",              NULL, NULL,       NULL,       1,            1,            1,             0,           -1, 50,500,500,500,   5 },
         /* 2 - Web Browser */
-	{ "Brave-browser",      NULL, NULL,       NULL,       1 << 1,    0,          0,                  0,           -1 },
-	{ "LibreWolf",          NULL, NULL,       NULL,       1 << 1,    0,          0,                  0,           -1 },
+	{ "Brave-browser",      NULL, NULL,       NULL,       1 << 1,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "LibreWolf",          NULL, NULL,       NULL,       1 << 1,       0,            0,             0,           -1, 50,500,500,500,   5 },
         /* 3 - Note-taking */
-	{ "Notion",             NULL, NULL,       NULL,       1 << 2,    0,          0,                  0,           -1 },
-	{ "Joplin",             NULL, NULL,       NULL,       1 << 2,    0,          0,                  0,           -1 },
-	{ "Emacs",              NULL, NULL,       NULL,       1 << 2,    0,          0,                  0,           -1 },
+	{ "Notion",             NULL, NULL,       NULL,       1 << 2,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Joplin",             NULL, NULL,       NULL,       1 << 2,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Emacs",              NULL, NULL,       NULL,       1 << 2,       0,            0,             0,           -1, 50,500,500,500,   5 },
         /* 4 - File Browser */
-	{ "Org.gnome.Nautilus", NULL, NULL,       NULL,       1 << 3,    0,          0,                  0,           -1 },
-	{ "dolphin",            NULL, NULL,       NULL,       1 << 3,    0,          0,                  0,           -1 },
-	{ "Pcmanfm",            NULL, NULL,       NULL,       1 << 3,    0,          0,                  0,           -1 },
-	{ "Nemo",               NULL, NULL,       NULL,       1 << 3,    0,          0,                  0,           -1 },
+	{ "Org.gnome.Nautilus", NULL, NULL,       NULL,       1 << 3,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "dolphin",            NULL, NULL,       NULL,       1 << 3,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Pcmanfm",            NULL, NULL,       NULL,       1 << 3,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Nemo",               NULL, NULL,       NULL,       1 << 3,       0,            0,             0,           -1, 50,500,500,500,   5 },
         /* 5 - IDE/Development */
-	{ "VSCodium",           NULL, NULL,       NULL,       1 << 4,    0,          0,                  0,           -1 },
-	{ "Chromium",           NULL, NULL,       NULL,       1 << 4,    0,          0,                  0,           -1 },
-	{ "firefoxdeveloperedition",           NULL, NULL,       NULL,       1 << 4,    0,               1,             0,           -1 },
+	{ "VSCodium",           NULL, NULL,       NULL,       1 << 4,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Chromium",           NULL, NULL,       NULL,       1 << 4,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "firefoxdeveloperedition",           NULL, NULL,       NULL,   4,    1,          0,            0,             0,           -1, 50,500,500,500,   5 },
         /* 6 - Text editing/BibTex Management/Book Management */
-	{ "TeXstudio",          NULL, NULL,       NULL,       1 << 5,    0,          0,                  0,           -1 },
-	{ "calibre",            NULL, NULL,       NULL,       1 << 5,    0,          0,                  0,           -1 },
-	{ "Zotero",             NULL, NULL,       NULL,       1 << 5,    0,          0,                  0,           -1 },
+	{ "TeXstudio",          NULL, NULL,       NULL,       1 << 5,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "calibre",            NULL, NULL,       NULL,       1 << 5,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Zotero",             NULL, NULL,       NULL,       1 << 5,       0,            0,             0,           -1, 50,500,500,500,   5 },
         /* 7 - Communication/Downloader */
-	{ "All-in-One Messenger",             NULL, NULL,       NULL,       1 << 6,    0,               1,             0,           -1 },
-	{ "zoom",               NULL, NULL,       NULL,       1 << 6,    0,          0,                  0,           -1 },
-	{ "Transmission-gtk",   NULL, NULL,       NULL,       1 << 6,    0,          0,                  0,           -1 },
-	{ "persepolis",         NULL, NULL,       NULL,       1 << 6,    0,          0,                  0,           -1 },
+	{ "All-in-One Messenger",             NULL, NULL,       NULL,   6,    1,          0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "zoom",               NULL, NULL,       NULL,       1 << 6,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Transmission-gtk",   NULL, NULL,       NULL,       1 << 6,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "persepolis",         NULL, NULL,       NULL,       1 << 6,       0,            0,             0,           -1, 50,500,500,500,   5 },
         /* 8 - Graphic Editing */
-	{ "kdenlive",           NULL, NULL,       NULL,       1 << 7,    0,          0,                  0,           -1 },
-	{ "krita",              NULL, NULL,       NULL,       1 << 7,    0,          0,                  0,           -1 },
-	{ "Gimp",               NULL, NULL,       NULL,       1 << 7,    0,          0,                  0,           -1 },
-	{ "Inkscape",           NULL, NULL,       NULL,       1 << 7,    0,          0,                  0,           -1 },
+	{ "kdenlive",           NULL, NULL,       NULL,       1 << 7,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "krita",              NULL, NULL,       NULL,       1 << 7,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Gimp",               NULL, NULL,       NULL,       1 << 7,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Inkscape",           NULL, NULL,       NULL,       1 << 7,       0,            0,             0,           -1, 50,500,500,500,   5 },
         /* 9 - Video and Media */
-	{ "Steam",              NULL, NULL,       NULL,       1 << 8,    0,          0,                  0,           -1 },
-	{ "Lutris",             NULL, NULL,       NULL,       1 << 8,    0,          0,                  0,           -1 },
-	{ "Leonflix",           NULL, NULL,       NULL,       1 << 8,    0,          0,                  0,           -1 },
-	{ "vlc",                NULL, NULL,       NULL,       1 << 8,    0,          0,                  0,           -1 },
-	{ "Popcorn-Time-Ru",    NULL, NULL,       NULL,       1 << 8,    0,          0,                  0,           -1 },
-	{ "Player",             NULL, NULL,       NULL,       1 << 8,    0,          0,                  0,           -1 },
-	{ "mpv",                NULL, NULL,       NULL,       1 << 8,    0,          0,                  0,           -1 },
-	{ "QMLPlayer",          NULL, NULL,       NULL,       1 << 8,    0,          0,                  0,           -1 },
-	{ "Audacious",          NULL, NULL,       NULL,       1 << 8,    0,          0,                  0,           -1 },
-	{ "Spotify",            NULL, NULL,       NULL,       1 << 8,    0,          0,                  0,           -1 },
-	{ "elisa",              NULL, NULL,       NULL,       1 << 8,    0,          0,                  0,           -1 },
+	{ "Steam",              NULL, NULL,       NULL,       1 << 8,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Lutris",             NULL, NULL,       NULL,       1 << 8,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Leonflix",           NULL, NULL,       NULL,       1 << 8,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "vlc",                NULL, NULL,       NULL,       1 << 8,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Popcorn-Time-Ru",    NULL, NULL,       NULL,       1 << 8,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Player",             NULL, NULL,       NULL,       1 << 8,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "mpv",                NULL, NULL,       NULL,       1 << 8,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "QMLPlayer",          NULL, NULL,       NULL,       1 << 8,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Audacious",          NULL, NULL,       NULL,       1 << 8,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "Spotify",            NULL, NULL,       NULL,       1 << 8,       0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "elisa",              NULL, NULL,       NULL,       1 << 8,       0,            0,             0,           -1, 50,500,500,500,   5 },
         /* Setting for programs that is not allowed to be swallowed */
-	{ NULL,                 NULL, NULL,       "Event Tester",  0,    0,          0,                  0,           -1 },
+	{ NULL,                 NULL, NULL,       "Event Tester",  0,       0,            0,             0,           -1, 50,500,500,500,   5 },
 };
 
 /* layout(s) */
