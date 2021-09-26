@@ -88,11 +88,11 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 *  WM_WINDOW_ROLE(STRING) = role
 	 */
-	/* class                role  instance    title       tags mask     isterminal  noswallow    isfloating   monitor float x,y,w,h  floatborderpx */
+	/* class                role  instance    title       tags mask     isfloating isterminal  noswallow     monitor float x,y,w,h  floatborderpx */
         /* 1 - Terminals */
-        { "Alacritty",          NULL, NULL,       NULL,       1,            1,            1,             0,           -1, 50,500,500,500,   5 },
-	{ "kitty",              NULL, NULL,       NULL,       1,            1,            1,             0,           -1, 50,500,500,500,   5 },
-	{ "URxvt",              NULL, NULL,       NULL,       1,            1,            1,             0,           -1, 50,500,500,500,   5 },
+        { "Alacritty",          NULL, NULL,       NULL,       1,            0,            1,             0,           -1, 50,500,500,500,   5 },
+	{ "kitty",              NULL, NULL,       NULL,       1,            0,            1,             0,           -1, 50,500,500,500,   5 },
+	{ "URxvt",              NULL, NULL,       NULL,       1,            0,            1,             0,           -1, 50,500,500,500,   5 },
         /* 2 - Web Browser */
 	{ "Brave-browser",      NULL, NULL,       NULL,       1 << 1,       0,            0,             0,           -1, 50,500,500,500,   5 },
 	{ "LibreWolf",          NULL, NULL,       NULL,       1 << 1,       0,            0,             0,           -1, 50,500,500,500,   5 },
