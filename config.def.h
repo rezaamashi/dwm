@@ -146,3 +146,9 @@ static IPCCommand ipccommands[] = {
   IPCCOMMAND(  quit,                1,      {ARG_TYPE_NONE}   )
 };
 
+static const char* firefoxcmd[] = {"firefox", NULL};
+static Key on_empty_keys[] = {
+	/* modifier key            function                argument */
+	{ 0,        XK_f,          spawn,                  {.v = firefoxcmd } },
+};
+
