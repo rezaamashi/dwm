@@ -108,13 +108,13 @@ static const Rule rules[] = {
         /* 5 - IDE/Development */
 	{ "VSCodium",           NULL, NULL,       NULL,       1 << 4,       0,            0,             0,           -1, 50,500,500,500,   5 },
 	{ "Chromium",           NULL, NULL,       NULL,       1 << 4,       0,            0,             0,           -1, 50,500,500,500,   5 },
-	{ "firefoxdeveloperedition",           NULL, NULL,       NULL,   4,    1,          0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "firefoxdeveloperedition",NULL, NULL,   NULL,       1 << 4,       0,            0,             0,           -1, 50,500,500,500,   5 },
         /* 6 - Text editing/BibTex Management/Book Management */
 	{ "TeXstudio",          NULL, NULL,       NULL,       1 << 5,       0,            0,             0,           -1, 50,500,500,500,   5 },
 	{ "calibre",            NULL, NULL,       NULL,       1 << 5,       0,            0,             0,           -1, 50,500,500,500,   5 },
 	{ "Zotero",             NULL, NULL,       NULL,       1 << 5,       0,            0,             0,           -1, 50,500,500,500,   5 },
         /* 7 - Communication/Downloader */
-	{ "All-in-One Messenger",             NULL, NULL,       NULL,   6,    1,          0,            0,             0,           -1, 50,500,500,500,   5 },
+	{ "All-in-One Messenger",NULL, NULL,       NULL,      1 << 6,       0,            0,             0,           -1, 50,500,500,500,   5 },
 	{ "zoom",               NULL, NULL,       NULL,       1 << 6,       0,            0,             0,           -1, 50,500,500,500,   5 },
 	{ "Transmission-gtk",   NULL, NULL,       NULL,       1 << 6,       0,            0,             0,           -1, 50,500,500,500,   5 },
 	{ "persepolis",         NULL, NULL,       NULL,       1 << 6,       0,            0,             0,           -1, 50,500,500,500,   5 },
@@ -137,6 +137,8 @@ static const Rule rules[] = {
 	{ "elisa",              NULL, NULL,       NULL,       1 << 8,       0,            0,             0,           -1, 50,500,500,500,   5 },
         /* Setting for programs that is not allowed to be swallowed */
 	{ NULL,                 NULL, NULL,       "Event Tester",  0,       0,            0,             0,           -1, 50,500,500,500,   5 },
+        /* Fix gtkfilechooser size */
+	{ NULL,                 "GtkFileChooserDialog", NULL,NULL, 0,       0,            0,             0,           -1, 50,500,500,500,   5 },
 };
 
 /* layout(s) */
