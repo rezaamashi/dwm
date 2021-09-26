@@ -1,0 +1,172 @@
+#+TITLE:  Reza's Personal DWM Build
+#+AUTHOR: Reza A'masyi
+#+EMAIL: mnurrreza@gmail.com
+#+DATE: Sunday, 26 September 2021
+
+* :ox: Overview
+This is a quite heavily patched DWM, with 26 patches applied, that aid me in my workflow.
+
+* Dependency
+- =yajl= for =ipc= patch
+- =polybar= for the bar
+- =rofi= for application launcher
+- =rofimoji= for emoji
+- =playerctl= for media control
+- =scrot= for screenshot
+- =lightdm= for screen lock and display manager (set this up for your own distro)
+
+** Autostart
+This build is patched with =coolautostart=, No need to setup =.xinitrc= or any other startup script.
+- =powertop= for better battery and power control in laptop
+- =xbacklight= to setup the screen brightness, ~I like my screen dark~
+- =xset= to setup cursor movement and fonts
+- =pacman= to list my packages (delete this in =config.def.h= if you use non-Arch distro)
+- =bitwarden= password storage
+- =setxkbmap= to set keyboard layout to =gb= and make =caps= to become =ctrl=
+- =nitrogen= to set wallpaper
+- =picom= for compositor
+- =dunst= notifications
+- =unclutter= make the mouse go away when unused
+- =pipewire= the hip sound controls
+- =syncthing-gtk= to sync files across devices
+- =redshift-gtk= save your eye for better sleep
+- =network-manager-applet= for internet connections
+- =volumeicon= control the volumes
+- =blueman= bluetooth controller
+- =xfce4-power-manager= better power control
+- =parcellite= for better clipboard
+- =polkit-gnome= to give =sudo= access for programs
+
+** For the Lazyy 😪
+This is an =org-mode= README file. If you use Emacs you could just =Ctrl-C-Ctrl-C= on each =src-code-blocks=.
+
+*** Arch-based Distros
+Download from the official Arch Repo
+#+begin_src sh
+  sudo pacman -S yajl rofi rofimoji playerctl scrot lightdm powertop xorg-xbacklight xorg-xsetroot bitwarden xorg-xsetkbmap nitrogen dunst unclutter pipewire pipewire-media-session pipewire-pulse syncthing-gtk-python3 network-manager-applet volumeicon blueman xfce4-power-manager parcellite polkit-gnome
+#+end_src
+
+And get some from AUR (I use =paru=)
+#+begin_src sh
+  paru -S polybar-dwm-module picom-jonaburg-git redshift-gtk-git
+#+end_src
+
+
+* Installation
+Clone this repo to your computer and install, that's it
+#+begin_src sh
+git clone https://github.com/rezaamashi/dwm.git
+cd dwm
+sudo make clean install
+#+end_src
+
+If you use Display Manager copy this to =/usr/share/xsessions/dwm.desktop=
+#+begin_src conf
+  [Desktop Entry]
+  Encoding=UTF-8
+  Name=DWM
+  Comment=Dynamic Window Manager
+  Exec=dwm
+  Type=XSession
+#+end_src
+And run it through your own DM
+
+* Tags Uses
+I set my tags with =switchtotag= patch to be used specifically, although not strictly, for certain program use. But navigation is still easy with =shiftviewclients= patch.
+
+Below is specific use case for each tags (and already set programs):
+1. :keyboard: Terminals
+   (Alacritty, Kitty, URxvt)
+2. 🌏 Web Browsers
+   (Brave, LibreWolf)
+3. :notebook: Note-Taking
+   (Notion, Joplin, Emacs)
+4. :file_folder: File Browser
+   (Nautilus, Dolphin, PcManFM, Nemo)
+5. :pick: IDE/Development
+   (VSCodium, Chromium, Firefox Developer Edition)
+6. :pencil2: TeX Editing/BibTeX & Book Management
+   (TeXStudio, Calibre, Zotero)
+7. :telephone_receiver: Communication/Downloader
+   (All-in-One Messenger, Zoom, Transmission-GTK, persepolis)
+8. :paintbrush: Graphic Editing
+   (KDEnLive, Krita, Gimp, InkScape)
+9. :musical_note: Media Players
+   (Steam, Lutris, Leonflix, vlc, Popcorn-Time, mpv, QMLPlayer, Audacious, Spotify, elisa,)
+
+* Layouts
+- =tile= (default)
+- =monocle= (default)
+- =spiral=
+- =dwindle=
+- =deck=
+- =bstack=
+- =bstackhoriz=
+- =grid=
+- =nrowgrid=
+- =horizgrid=
+- =gaplessgrid=
+- =centeredmaster=
+- =centeredfloatingmaster=
+- =floating= (default)
+
+* List of Applied Patches
+Everything that's been applied to this build
+- =restartsig=
+  Restart =dwm= from within the Daemon
+- =coolautostart=
+  Set up program to run with =dwm=
+- =anybar=
+  Allow user to install any bar (I am not quite fond of the original)
+- =ipc=
+
+- =switchtotag=
+  Set certain programs to show on certain tags (neat!)
+- =windowrolerule=
+  To fix =Gtkfilechooserdialog= problem as it spawns too big over the screen
+- =netclientliststacking=
+
+- =fakefullscreenclient=
+  Allow programs to go "full screen" while still being in its place
+- =shiftviewclients=
+  Move around the tags, but only on the one that has clients (quick)
+- =onemptykeys=
+  Run program directly on empty tags
+- =attachasideandbelow=
+  Instead of spawning to master, new window spawn on client
+- =pertag=
+  Compartmentalize the layout setup on each tags
+- =viewontag=
+  Follow moved window wherever it goes
+- =swallow=
+  Swallow program that's opened from Terminal
+- =vanitygaps-cfacts-combo=
+  Just gaps, and cfacts
+- =alwayscenter=
+  Every floating window will spawn in the center
+- =ewmh=
+
+- =focusonnetactive=
+  Auto focus on urgent windows
+- =scratchpad_alt=
+  i3 like scratchpad setup
+- =togglefullscreen=
+  Add hotkey to toggle every window to go full screen
+- =losefullscreen=
+  Quite full screen when another window is selected
+- =cyclelayout=
+  Cycle through all the available layout (cause we have a lot)
+- =push=
+  Move window through the stack
+- =savefloat=
+  Save the size of floating window before it unfloated, for future floating.
+- =floatrules=
+  Set specific size for window floating
+- =resizecorners=
+  Allow user to resize window from every \mdash closest \mdash corner
+
+* :pencil: Todos
+- [ ] Provide proper link for patches
+- [ ] Provide a proper keybinding documentation
+  - [ ] Make separate =org= file for keybindings
+  - [ ] Update =dwm.1= to the correct keybinding
