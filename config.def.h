@@ -222,6 +222,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_j,      pushdown,       {0} },
 	{ MODKEY|ShiftMask,             XK_k,      pushup,         {0} },
         { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_h,      focusdir,       {.i = 0 } }, // left
+	{ MODKEY|Mod1Mask,              XK_l,      focusdir,       {.i = 1 } }, // right
+	{ MODKEY|Mod1Mask,              XK_k,      focusdir,       {.i = 2 } }, // up
+	{ MODKEY|Mod1Mask,              XK_j,      focusdir,       {.i = 3 } }, // down
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
