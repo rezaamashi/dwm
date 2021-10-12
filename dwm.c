@@ -62,7 +62,7 @@
 #define INTERSECTC(x,y,w,h,z)   (MAX(0, MIN((x)+(w),(z)->x+(z)->w) - MAX((x),(z)->x)) \
                                * MAX(0, MIN((y)+(h),(z)->y+(z)->h) - MAX((y),(z)->y)))
 #define ISVISIBLEONTAG(C, T)    ((C->tags & T))
-#define ISVISIBLE(C)            ISVISIBLEONTAG(C, C->mon->tagset[C->mon->seltags])
+#define ISVISIBLE(C)            (ISVISIBLEONTAG(C, C->mon->tagset[C->mon->seltags]) || C -> issticky)
 #define LENGTH(X)               (sizeof X / sizeof X[0])
 #define MOUSEMASK               (BUTTONMASK|PointerMotionMask)
 #define WIDTH(X)                ((X)->w + 2 * (X)->bw)
@@ -120,7 +120,7 @@ struct Client {
 	int basew, baseh, incw, inch, maxw, maxh, minw, minh;
 	int bw, oldbw;
 	unsigned int tags;
-        int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen, isterminal, noswallow;
+        int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen, isterminal, noswallow, issticky;
 	int floatborderpx;
 	int fakefullscreen;
 	int beingmoved;
@@ -309,6 +309,7 @@ static void togglebar(const Arg *arg);
 static void togglefakefullscreen(const Arg *arg);
 static void togglefloating(const Arg *arg);
 static void togglefullscreen(const Arg *arg);
+static void togglesticky(const Arg *arg);
 static void toggletag(const Arg *arg);
 static void toggleview(const Arg *arg);
 static void unfocus(Client *c, int setfocus);
@@ -3462,6 +3463,15 @@ togglefullscreen(const Arg *arg) {
         return;
 
     setfullscreen(selmon->sel, !selmon->sel->isfullscreen);
+}
+
+void
+togglesticky(const Arg *arg)
+{
+	if (!selmon->sel)
+		return;
+	selmon->sel->issticky = !selmon->sel->issticky;
+	arrange(selmon);
 }
 
 void
