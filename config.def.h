@@ -135,6 +135,15 @@ static const Rule rules[] = {
        { "Audacious",          NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
        { "Spotify",            NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
        { "elisa",              NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
+       /* Non-tag options */
+       /* Set default to float */
+       { "zoom",               NULL, NULL,       NULL,            0,   0,        1,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Xfce4-power-manager-settings",NULL,NULL,NULL,           0,   0,        1,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Pavucontrol",        NULL, NULL,       NULL,            0,   0,        1,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Syncthing GTK",      NULL, NULL,       NULL,            0,   0,        1,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Blueman-services",   NULL, NULL,       NULL,            0,   0,        1,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Blueman-manager",     NULL,NULL,       NULL,            0,   0,        1,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Nm-connection-editor",NULL,NULL,       NULL,            0,   0,        1,         0,             0,           -1, 50,500,500,500,   0 },
        /* Setting for programs that is not allowed to be swallowed */
        { NULL,                 NULL, NULL,       "Event Tester",  0,   0,        0,         0,             1,           -1, 50,500,500,500,   5 },
        /* Fix gtkfilechooser size */
