@@ -376,36 +376,39 @@ static IPCCommand ipccommands[] = {
 
 /* On Empty Keys - run commands on empty tags using predetermined keys */
 /* Programs */
-static const char* bravecmd[] = {"brave", NULL};
-static const char* chromiumcmd[] = {"chromium", NULL};
-static const char* librewolfcmd[] = {"librewolf", NULL};
-static const char* firefoxdevcmd[] = {"firefox-developer-edition", NULL};
-static const char* nemocmd[] = {"nemo", NULL};
-static const char* dolphincmd[] = {"dolphin", NULL};
+static const char* webbrowsercmd[] = {"librewolf", NULL};
+static const char* webdevcmd[] = {"firefox-developer-edition", NULL};
+static const char* filemanagerguicmd[] = {"nemo", NULL};
+static const char* filemanagertermcmd[] = { "alacritty", "-e", "ranger", NULL};
+static const char* musictermcmd[] = { "alacritty", "-e", "ncmpcpp", NULL};
+static const char* htopcmd[] = { "alacritty", "-e", "htop", NULL};
 static const char* emacscmd[] = {"zsh", "-i", "-c", "emacs", NULL};
 static const char* zoterocmd[] = {"zotero", NULL};
+static const char* calibrecmd[] = {"sh", "-c", "'CALIBRE_USE_DARK_PALETTE=1", "calibre'" , NULL};
 static const char* spotifyadblockcmd[] = {"env", "LD_PRELOAD=/usr/local/lib/spotify-adblock.so", "spotify", "%U", NULL};
 /* Power Menu */
 static const char* poweroffcmd[] = {"loginctl", "poweroff", NULL};
 static const char* rebootcmd[] = {"loginctl", "reboot", NULL};
-static const char* hsleepcmd[] = {"./.suckless/dwm/scripts/i3lock-fancy/i3lock-fancy", "&&", "loginctl", "hybrid-sleep", NULL};
+static const char* hsleepcmd[] = {"dm-tool", "switch-to-greeter", "&&", "loginctl", "hybrid-sleep", NULL};
 static const char* logoutcmd[] = {"pkill", "dwm", NULL};
 /* Executions */
 static Key on_empty_keys[] = {
 	/* modifier key            function                argument */
-	{ 0,        XK_a,          spawn,                  {.v = termcmd } },
-	{ 0,        XK_b,          spawn,                  {.v = bravecmd } },
-	{ 0,        XK_c,          spawn,                  {.v = chromiumcmd } },
-	{ 0,        XK_w,          spawn,                  {.v = librewolfcmd } },
-	{ 0,        XK_f,          spawn,                  {.v = firefoxdevcmd } },
-	{ 0,        XK_n,          spawn,                  {.v = nemocmd } },
-	{ 0,        XK_d,          spawn,                  {.v = dolphincmd } },
+	{ 0,        XK_t,          spawn,                  {.v = termcmd } },
+	{ 0,        XK_w,          spawn,                  {.v = webbrowsercmd } },
+	{ 0,        XK_d,          spawn,                  {.v = webdevcmd } },
+	{ 0,        XK_h,          spawn,                  {.v = htopcmd } },
+	{ 0,        XK_f,          spawn,                  {.v = filemanagerguicmd } },
+	{ 0,        XK_G,          spawn,                  {.v = filemanagertermcmd } },
+	{ 0,        XK_m,          spawn,                  {.v = musictermcmd } },
 	{ 0,        XK_e,          spawn,                  {.v = emacscmd } },
 	{ 0,        XK_z,          spawn,                  {.v = zoterocmd } },
+	{ 0,        XK_c,          spawn,                  {.v = calibrecmd } },
 	{ 0,        XK_s,          spawn,                  {.v = spotifyadblockcmd } },
-	{ 0,        XK_h,          spawn,                  {.v = hsleepcmd } },
+	/* Power Menu */
+	{ 0,        XK_i,          spawn,                  {.v = hsleepcmd } },
 	{ 0,        XK_p,          spawn,                  {.v = poweroffcmd } },
 	{ 0,        XK_r,          spawn,                  {.v = rebootcmd } },
-	{ 0,        XK_k,          spawn,                  {.v = lockcmd } },
-	{ 0,        XK_l,          spawn,                  {.v = logoutcmd } },
+	{ 0,        XK_l,          spawn,                  {.v = lockcmd } },
+	{ 0,        XK_o,          spawn,                  {.v = logoutcmd } },
 };
