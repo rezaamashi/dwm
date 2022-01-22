@@ -40,6 +40,8 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
+	"dbus-launch", "--autolaunch=$(cat", "/var/lib/dbus/machine-id)", "dwm", NULL,
+	"dirmngr", "--daemon", NULL,
 	"powertop", "--auto-tune", NULL,
   /* this is to set the brightness - for in door ffs */
   "xbacklight", "-set", "5%", NULL,
@@ -67,6 +69,7 @@ static const char *const autostart[] = {
 	"syncthing-gtk", "-m", NULL,
   "redshift", "-l", "-7.24:112.75", NULL, // nightlight setting based on Surabaya
 	"nm-applet", NULL,
+	"expressvpn-gui-gtk", NULL,
 	"blueman-applet", NULL,
 	"xfce4-power-manager", "--daemon", NULL, /* also managing its own dpms and power saving setting */
 	"parcellite", "-n", NULL,
