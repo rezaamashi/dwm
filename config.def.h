@@ -234,16 +234,16 @@ static Key keys[] = {
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_j,      pushdown,       {0} },
 	{ MODKEY|ShiftMask,             XK_k,      pushup,         {0} },
-        { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY|Mod1Mask,              XK_h,      focusdir,       {.i = 0 } }, // left
-	{ MODKEY|Mod1Mask,              XK_l,      focusdir,       {.i = 1 } }, // right
-	{ MODKEY|Mod1Mask,              XK_k,      focusdir,       {.i = 2 } }, // up
-	{ MODKEY|Mod1Mask,              XK_j,      focusdir,       {.i = 3 } }, // down
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_h,      placedir,       {.i = 0 } }, // left
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_l,      placedir,       {.i = 1 } }, // right
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_k,      placedir,       {.i = 2 } }, // up
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_j,      placedir,       {.i = 3 } }, // down
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
+    { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+	{ MODKEY|ControlMask,           XK_h,      focusdir,       {.i = 0 } }, // left
+	{ MODKEY|ControlMask,           XK_l,      focusdir,       {.i = 1 } }, // right
+	{ MODKEY|ControlMask,           XK_k,      focusdir,       {.i = 2 } }, // up
+	{ MODKEY|ControlMask,           XK_j,      focusdir,       {.i = 3 } }, // down
+	{ MODKEY|ControlMask|ShiftMask, XK_h,      placedir,       {.i = 0 } }, // left
+	{ MODKEY|ControlMask|ShiftMask, XK_l,      placedir,       {.i = 1 } }, // right
+	{ MODKEY|ControlMask|ShiftMask, XK_k,      placedir,       {.i = 2 } }, // up
+	{ MODKEY|ControlMask|ShiftMask, XK_j,      placedir,       {.i = 3 } }, // down
+	{ MODKEY,                       XK_o,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
