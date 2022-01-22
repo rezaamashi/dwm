@@ -272,9 +272,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_q,      togglegaps,     {0} },
 	{ MODKEY,                       XK_c,      killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killunsel,      {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} }, /* tile */
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} }, /* monocle */
+	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[10]} }, /* gaplessgrid */
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[13]} }, /* float */
 	{ MODKEY,                       XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY,                       XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
