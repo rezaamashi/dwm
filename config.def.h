@@ -195,8 +195,9 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *xkillcmd[]  = { "xkill", NULL };
 
-// static const char *roficmd[] = { "rofi", "-show", "drun", NULL };
-static const char *roficmd[] = { "./.config/rofi/launchers/misc/launcher.sh", NULL };
+static const char *rofiruncmd[] = { "rofi", "-show", "run", NULL };
+static const char *rofidruncmd[] = { "rofi", "-show", "drun", NULL };
+//static const char *roficmd[] = { "./.config/rofi/launchers/misc/launcher.sh", NULL };
 static const char *rofimojicmd[] = { "rofimoji", NULL };
 static const char *emaevcmd[] = { "emacsclient", "--eval", "(emacs-everywhere)", NULL };
 /* pulseaudio volume-control */
@@ -223,8 +224,9 @@ static const char *lockcmd[] = { "dm-tools", "lock", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_d,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = xkillcmd } },
+	{ MODKEY,                       XK_d,      spawn,          {.v = rofidruncmd } },
+	{ MODKEY,                       XK_r,      spawn,          {.v = rofiruncmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = rofimojicmd } },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = emaevcmd } },
