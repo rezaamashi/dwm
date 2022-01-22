@@ -52,8 +52,6 @@ static const char *const autostart[] = {
 	"xset", "fp+", "/usr/share/fonts", NULL,
 	"xset", "fp", "rehash", NULL,
 	/* App autostart */
-  "bitwarden", NULL,
-  "nautilus", "--daemon", NULL,
 	/* Keyboard Map setting */
 	"setxkbmap", "-layout", "gb", "-option", "ctrl:nocaps", NULL,
 	/* Important Module for WMs*/
