@@ -90,51 +90,51 @@ static const Rule rules[] = {
 	 */
        /* class                role  instance    title       tags mask switchtag isfloating isterminal  noswallow     monitor float x,y,w,h  floatborderpx */
        /* 1 - Terminals */
-       { "Alacritty",          NULL, NULL,       NULL,       1,        1,        0,         1,             0,           -1, 50,500,500,500,   5 },
-       { "kitty",              NULL, NULL,       NULL,       1,        1,        0,         1,             0,           -1, 50,500,500,500,   5 },
-       { "URxvt",              NULL, NULL,       NULL,       1,        1,        0,         1,             0,           -1, 50,500,500,500,   5 },
+       { "Alacritty",          NULL, NULL,       NULL,       1,        1,        0,         1,             0,           -1, 50,500,500,500,   0 },
+       { "kitty",              NULL, NULL,       NULL,       1,        1,        0,         1,             0,           -1, 50,500,500,500,   0 },
+       { "URxvt",              NULL, NULL,       NULL,       1,        1,        0,         1,             0,           -1, 50,500,500,500,   0 },
        /* 2 - Web Browser */
-       { "Brave-browser",      NULL, NULL,       NULL,       1 << 1,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "LibreWolf",          NULL, NULL,       NULL,       1 << 1,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
+       { "Brave-browser",      NULL, NULL,       NULL,       1 << 1,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "LibreWolf",          NULL, NULL,       NULL,       1 << 1,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
        /* 3 - Note-taking */
-       { "Notion",             NULL, NULL,       NULL,       1 << 2,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Joplin",             NULL, NULL,       NULL,       1 << 2,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Emacs",              NULL, NULL,       NULL,       1 << 2,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
+       { "Notion",             NULL, NULL,       NULL,       1 << 2,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Joplin",             NULL, NULL,       NULL,       1 << 2,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Emacs",              NULL, NULL,       NULL,       1 << 2,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
        /* 4 - File Browser */
-       { "Org.gnome.Nautilus", NULL, NULL,       NULL,       1 << 3,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "dolphin",            NULL, NULL,       NULL,       1 << 3,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Pcmanfm",            NULL, NULL,       NULL,       1 << 3,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Nemo",               NULL, NULL,       NULL,       1 << 3,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
+       { "Org.gnome.Nautilus", NULL, NULL,       NULL,       1 << 3,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "dolphin",            NULL, NULL,       NULL,       1 << 3,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Pcmanfm",            NULL, NULL,       NULL,       1 << 3,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Nemo",               NULL, NULL,       NULL,       1 << 3,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
        /* 5 - IDE/Development */
-       { "VSCodium",           NULL, NULL,       NULL,       1 << 4,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Chromium",           NULL, NULL,       NULL,       1 << 4,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "firefoxdeveloperedition",NULL, NULL,   NULL,       1 << 4,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
+       { "VSCodium",           NULL, NULL,       NULL,       1 << 4,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Chromium",           NULL, NULL,       NULL,       1 << 4,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "firefoxdeveloperedition",NULL, NULL,   NULL,       1 << 4,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
        /* 6 - Text editing/BibTex Management/Book Management */
-       { "TeXstudio",          NULL, NULL,       NULL,       1 << 5,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "calibre",            NULL, NULL,       NULL,       1 << 5,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Zotero",             NULL, NULL,       NULL,       1 << 5,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
+       { "calibre",            NULL, NULL,       NULL,       1 << 5,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Zotero",             NULL, NULL,       NULL,       1 << 5,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
        /* 7 - Communication/Downloader */
-       { "All-in-One Messenger",NULL, NULL,       NULL,      1 << 6,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "zoom",               NULL, NULL,       NULL,       1 << 6,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Transmission-gtk",   NULL, NULL,       NULL,       1 << 6,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "persepolis",         NULL, NULL,       NULL,       1 << 6,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       /* 8 - Graphic Editing */
-       { "kdenlive",           NULL, NULL,       NULL,       1 << 7,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "krita",              NULL, NULL,       NULL,       1 << 7,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Gimp",               NULL, NULL,       NULL,       1 << 7,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Inkscape",           NULL, NULL,       NULL,       1 << 7,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
+       { "All-in-One Messenger",NULL, NULL,       NULL,      1 << 6,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Transmission-gtk",   NULL, NULL,       NULL,       1 << 6,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "persepolis",         NULL, NULL,       NULL,       1 << 6,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       /* 8 - Graphic Editing/Document Editing */
+       { "wps",                NULL, NULL,       NULL,       1 << 7,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "TeXstudio",          NULL, NULL,       NULL,       1 << 7,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "kdenlive",           NULL, NULL,       NULL,       1 << 7,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "krita",              NULL, NULL,       NULL,       1 << 7,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Gimp",               NULL, NULL,       NULL,       1 << 7,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Inkscape",           NULL, NULL,       NULL,       1 << 7,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
        /* 9 - Video and Media */
-       { "Steam",              NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Lutris",             NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Leonflix",           NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "vlc",                NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Popcorn-Time-Ru",    NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Player",             NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "mpv",                NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "QMLPlayer",          NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Audacious",          NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "Spotify",            NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
-       { "elisa",              NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   5 },
+       { "Steam",              NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Lutris",             NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Leonflix",           NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "vlc",                NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Popcorn-Time-Ru",    NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Player",             NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "mpv",                NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "QMLPlayer",          NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Audacious",          NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "Spotify",            NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
+       { "elisa",              NULL, NULL,       NULL,       1 << 8,   1,        0,         0,             0,           -1, 50,500,500,500,   0 },
        /* Non-tag options */
        /* Set default to float */
        { "zoom",               NULL, NULL,       NULL,            0,   0,        1,         0,             0,           -1, 50,500,500,500,   0 },
@@ -145,9 +145,9 @@ static const Rule rules[] = {
        { "Blueman-manager",     NULL,NULL,       NULL,            0,   0,        1,         0,             0,           -1, 50,500,500,500,   0 },
        { "Nm-connection-editor",NULL,NULL,       NULL,            0,   0,        1,         0,             0,           -1, 50,500,500,500,   0 },
        /* Setting for programs that is not allowed to be swallowed */
-       { NULL,                 NULL, NULL,       "Event Tester",  0,   0,        0,         0,             1,           -1, 50,500,500,500,   5 },
+       { NULL,                 NULL, NULL,       "Event Tester",  0,   0,        0,         0,             1,           -1, 50,500,500,500,   0 },
        /* Fix gtkfilechooser size */
-       { NULL,                 "GtkFileChooserDialog", NULL,NULL, 0,   0,        0,         0,             0,           -1, 50,500,500,500,   5 },
+       { NULL,                 "GtkFileChooserDialog", NULL,NULL, 0,   0,        0,         0,             0,           -1, 50,500,500,500,   0 },
 };
 
 /* layout(s) */
