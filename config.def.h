@@ -65,12 +65,11 @@ static const char *const autostart[] = {
   "pipewire-media-session", NULL,
   /* System tray configurations */
 	"syncthing-gtk", "-m", NULL,
-  "redshift-gtk", "-l", "-7.24:112.75", NULL, // nightlight setting based on Surabaya
+  "redshift", "-l", "-7.24:112.75", NULL, // nightlight setting based on Surabaya
 	"nm-applet", NULL,
-	"volumeicon", NULL,
 	"blueman-applet", NULL,
-	"xfce4-power-manager", NULL, /* also managing its own dpms and power saving setting */
-	"parcellite", NULL,
+	"xfce4-power-manager", "--daemon", NULL, /* also managing its own dpms and power saving setting */
+	"parcellite", "-n", NULL,
   // "persepolis", "--tray", NULL,
   /* Polkit */
   "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", NULL,
