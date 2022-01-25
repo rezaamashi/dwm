@@ -6,7 +6,7 @@
 * :ox: Overview
 This is a quite heavily patched DWM, with 26 patches applied, that aid me in my workflow.
 
-* Dependency
+* Dependencies
 - =yajl= for =ipc= patch
 - =polybar= for the bar
 - =rofi= for application launcher
@@ -53,7 +53,9 @@ And get some from AUR (I use =paru=)
 
 
 * Installation
-Clone this repo to your computer and install, that's it
+
+** Manual (not recommended)
+Clone this repo to your computer and install (make sure you met the [[*Dependency][Dependencies]])
 #+begin_src sh
 git clone https://github.com/rezaamashi/dwm.git
 cd dwm
@@ -70,6 +72,16 @@ If you use Display Manager copy this to =/usr/share/xsessions/dwm.desktop=
   Type=XSession
 #+end_src
 And run it through your own DM
+
+** Using =install= Script
+Clone this repo to your computer and install, that's it
+#+begin_src sh
+git clone https://github.com/rezaamashi/dwm.git
+cd dwm
+chmod 755 install.sh
+./install.sh
+#+end_src
+
 
 * Tags Uses
 I set my tags with =switchtotag= patch to be used specifically, although not strictly, for certain program use. But navigation is still easy with =shiftviewclients= patch.
@@ -95,8 +107,8 @@ Below is specific use case for each tags (and already set programs):
    (Steam, Lutris, Leonflix, vlc, Popcorn-Time, mpv, QMLPlayer, Audacious, Spotify, elisa,)
 
 * Layouts
-- =tile= (default)
-- =monocle= (default)
+- =tile= (non-patch)
+- =monocle= (non-patch)
 - =spiral=
 - =dwindle=
 - =deck=
@@ -108,7 +120,7 @@ Below is specific use case for each tags (and already set programs):
 - =gaplessgrid=
 - =centeredmaster=
 - =centeredfloatingmaster=
-- =floating= (default)
+- =floating= (non-patch)
 
 * List of Applied Patches
 Everything that's been applied to this build
